@@ -1,2 +1,15 @@
-<view>首页 <text class="iconfont icon-shouye"></text></view>
+<view class="pyg_index">
+<SearchInput></SearchInput>
+    <view class="index_swiper">
+    <swiper autoplay indicator-dots circular>
+      <swiper-item
+      wx:for="{{swiperList}}"
+      wx:key="goods_id" >
+        <navigator url="{{item.navigator_url}}">
+          <image mode="widthFix" src="{{item.image_src}}"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+    </view>
+</view>
   

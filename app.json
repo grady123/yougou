@@ -16,16 +16,16 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor":"#eb4450",
     "navigationBarTitleText": "优购",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "white"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "color": "#999",
+    "color":  "#999",
     "selectedColor":"#ff2d4a",
-    "backgroundColor": "#fafafa",
+    "backgroundColor":  "#fafafa",
     "position": "bottom",
     "borderStyle": "black",
     "list": [
