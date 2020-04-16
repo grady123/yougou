@@ -11,5 +11,19 @@
       </swiper-item>
     </swiper>
     </view>
+    <!-- 导航 开始 -->
+<!-- 导航 开始 -->
+
+  <view class="index_cate">
+    <navigator 
+    wx:for="{{catesList}}"
+    wx:key="name"
+    url="/pages/category/index"
+    open-type="switchTab"
+    >
+    <image mode="widthFix" src="{{item.image_src}}" ></image>
+  </navigator>
+  </view>
+  <!-- 导航 结束 -->
 </view>
   

@@ -7,28 +7,26 @@ Page({
   },
   //options(Object)
   onLoad: function(options) {
-      // wx.request({
-      //   url:  'https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata',
-      //   data: {},
-      //   header: {'content-type':'application/json'},
-      //   method: 'GET',
-      //   dataType: 'json',
-      //   responseType: 'text',
-      //   success: (result) => { 
-      //    this.setData({
-      //     swiperList: result.data.message
-      //   })
-      //   },
-      //   fail: () => {},
-      //   complete: () => {}
-      // });
-      request({ url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata'}).then((result)=>{
-        console.log(result);
-        
-              this.setData({
-          swiperList: result.data.message
+    this.getSwiperList();
+    this.getCateList();
+  },
+    // 获取轮播图数据
+    getSwiperList(){
+      request({ url: "/home/swiperdata" })
+      .then(result => {
+        this.setData({
+          swiperList: result
         })
-      })   
+      })
+    },
+      // 获取 分类导航数据
+  getCateList(){
+    request({ url: "/home/catitems" })
+    .then(result => {
+      this.setData({
+        catesList: result
+      })
+    })
   },
   onReady: function() {
     
