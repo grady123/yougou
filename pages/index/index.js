@@ -4,11 +4,16 @@ Page({
   data: {
       // 轮播图数组
       swiperList: [], 
+          // 导航 数组
+    catesList:[],
+       // 楼层数据
+       floorList:[]
   },
   //options(Object)
   onLoad: function(options) {
     this.getSwiperList();
     this.getCateList();
+    this.getFloorList();
   },
     // 获取轮播图数据
     getSwiperList(){
@@ -28,6 +33,15 @@ Page({
       })
     })
   },
+    // 获取 楼层数据
+    getFloorList(){
+      request({ url: "/home/floordata" })
+      .then(result => {
+        this.setData({
+          floorList: result
+        })
+      })
+    },
   onReady: function() {
     
   },
