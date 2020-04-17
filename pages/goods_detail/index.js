@@ -1,13 +1,15 @@
-// pages/goods_detail/index.js
+import { request } from "../../request/index.js";
+import regeneratorRuntime from '../../lib/runtime/runtime';
 Page({
 
-  /**
+ /**
    * 页面的初始数据
    */
   data: {
-
+    goodsObj: {},
+    // 商品是否被收藏
+    isCollect:false
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
