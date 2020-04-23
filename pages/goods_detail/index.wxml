@@ -19,7 +19,7 @@
 <view class="goods_name_row">
   <view class="goods_name">{{goodsObj.goods_name}}{{goodsObj.goods_name}}</view>
   <view class="goods_collect" bindtap="handleCollect" >
-    <text class="iconfont   {{isCollect?'icon-shoucang1':'icon-tubiao14'}} "></text>
+    <text class="iconfont   {{isCollect?'icon-tubiao14':'icon-shoucang1'}} "></text>
     <view class="collect_text">收藏</view>
   </view>
 </view>
